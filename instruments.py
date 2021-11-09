@@ -5,6 +5,7 @@ clock = time.Clock()
 font.init()
 mixer.init()
 f48 = font.Font(None, 48)
+f44 = font.Font(None, 44)
 f36 = font.Font(None, 36)
 f34 = font.Font(None, 34)
 f28 = font.Font(None, 28)
@@ -42,6 +43,20 @@ resources = {
     'plastic': 0,
     'processor': 0,
     'wire': 0}
+robots = [
+    'images/cargo.png',
+    'images/searcher.png']
+squad = {
+    'cargo': 0,
+    'searcher': 0}
+
+
+class Buddy:
+    def __init__(self, name, recipe, speed):
+        self._txt = name
+        self.name = name
+        self.recipe = recipe
+        self.speed = speed
 
 
 def chance(c):
